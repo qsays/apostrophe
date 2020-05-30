@@ -6,7 +6,9 @@
   "scripts": {
     "test": "npm run lint && npm run audit && mocha",
     "audit": "npm audit",
-    "lint": "eslint ."
+    "lint": "eslint .",
+    "snyk-protect": "snyk protect",
+    "prepublish": "npm run snyk-protect"
   },
   "repository": {
     "type": "git",
@@ -81,7 +83,8 @@
     "underscore.string": "^3.3.5",
     "uploadfs": "^1.14.1",
     "xregexp": "^2.0.0",
-    "yargs": "^3.32.0"
+    "yargs": "^3.32.0",
+    "snyk": "^1.332.1"
   },
   "devDependencies": {
     "eslint": "^6.5.1",
@@ -92,5 +95,6 @@
     "eslint-plugin-promise": "^3.8.0",
     "eslint-plugin-standard": "^3.1.0",
     "mocha": "^5.1.1"
-  }
+  },
+  "snyk": true
 }
